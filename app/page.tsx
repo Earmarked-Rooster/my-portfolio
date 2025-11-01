@@ -1,17 +1,18 @@
 // import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, ExternalLink, Mail, Briefcase, Code, MapPin, Calendar, Award } from 'lucide-react';
+import { Github, Linkedin, Twitter, ExternalLink, Mail, Briefcase, Code, MapPin, Calendar, Award, Handshake } from 'lucide-react';
 
 import portfolioData from '@/lib/config';
 import type { Education, Experience, Project } from '@/lib/types';
 
 const IconMap: {
-	[key: string]: typeof Github | typeof Linkedin | typeof Twitter | typeof Code;
+	[key: string]: typeof Github | typeof Linkedin | typeof Twitter | typeof Code | typeof Handshake;
 } = {
 	GitHub: Github,
 	LinkedIn: Linkedin,
 	Twitter: Twitter,
 	Blog: Code,
+	Handshake: Handshake
 };
 
 export default function Home() {
