@@ -1,14 +1,19 @@
+// Import the Portfolio type from the type definition file.
 import type { Portfolio } from "@/lib/types";
 
+// The main portfolio data object.
 const PORTFOLIO_DATA: Portfolio = {
+	// Your name.
 	name: "Andy Tahmazyan",
+	// Your headline.
 	headline: "Student | Intermediate Programmer | AI Enthusiast",
-	bio: "A results-driven Math of Computation student at UCLA with a passion for building disruptive, scalable, and user-centric applications. Eager to leverage modern technologies to solve real-world problems and drive impactful change. Currently seeking high-growth internship opportunities for Summer 202X.",
+	// A short bio about yourself.
+	bio: "A results-driven Math of Computation student at UCLA with a passion for building disruptive, scalable, and user-centric applications. Eager to leverage modern technologies to solve real-world problems and drive impactful change. Currently seeking high-growth internship opportunities for Summer 2025.",
 
-	// Your contact email
+	// Your contact email.
 	email: "rio4tahmazyan@gmail.com",
 
-	// Add your links here
+	// Your social media and other links.
 	// Supported icons: 'GitHub', 'LinkedIn', 'Twitter', 'Blog'
 	links: [
 		{ name: "GitHub", url: "https://github.com/Earmarked-Rooster" },
@@ -17,77 +22,72 @@ const PORTFOLIO_DATA: Portfolio = {
 		// { name: "Blog", url: "https://yourblog.com" },
 	],
 
-	// Add your skills here
+	// A list of your skills.
 	skills: [
-		"Node.js", " ", " ", " ", 
-		"Python", "Go", "C++", "Java", "AWS", "Docker", "Gradle" , "Maven"
+		"Node.js", "Python", "Go", "C++", "Java", "AWS", "Docker", "Gradle", "Maven"
 	],
 
-	// Add your projects here
+	// A list of your projects.
 	projects: [
 		{
 			title: "Factions Plugin",
 			description: "My own Minecraft plugin made utiizing Paper/Bukkit API made to faciliate player interaction within a populated Minecraft Server.",
-			stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Vercel"],
+			stack: ["Java", "Paper", "Bukkit", "Gradle", "Maven"],
 			githubLink: "https://github.com/Earmarked-Rooster/My-Paper-Plugin",
-			liveLink: "",
-		},
-		{
-			title: "VibeCheck",
-			description: "A mobile-first social app that uses sentiment analysis to curate positive news feeds. Leveraged serverless functions for infinite scalability and low-cost operation.",
-			stack: ["React Native", "Firebase", "Google Cloud Functions", "NLP.js"],
-			githubLink: "",
-			liveLink: "",
-		},
-		{
-			title: "AlgoVisualizer",
-			description: "A web-based tool for visualizing complex data structures and algorithms, built to help students (like me) understand core CS concepts in an interactive way.",
-			stack: ["TypeScript", "React", "D3.js"],
-			githubLink: "",
 			liveLink: "",
 		},
 	],
 
-	// Add your experience here
+	// A list of your work experiences.
 	experience: [
 		{
 			role: "Research Collaborator",
 			company: "St. Francis High School/Harvard Medical School",
 			date: "Spring 2024-Spring 2025",
 			location: "La Canada Flintridge",
-			description: "Selected for a highly competitive internship program. Will be joining the [Cloud/AI/Growth] team to work on high-impact, customer-facing features."
+			description: "Worked in a group of ten peers to research the effect of bacteria in microgravity. Operations included following lab procedure and recording notes to send to the Harvard Medical Lab in Boston."
 		},
 		{
-			role: "Club President / Co-Founder",
-			company: "[Your Vibe-Coding Club Name]",
-			date: "Aug 202X - Present",
-			location: "[Your University]",
-			description: "Grew the organization from 5 to 200+ members by fostering a culture of innovation and 'vibecoding.' Organized tech talks with industry leaders from Google, Meta, and hot startups."
+			role: "Cloud Server Administrator",
+			company: "Self-employed",
+			date: "June 2025 - Present",
+			location: "Online",
+			description: "Utilizing an Amazon AWS instance to host a populated Minecraft Java server."
 		},
 		{
-			role: "Teaching Assistant - Intro to CS",
-			company: "[Your University]",
-			date: "Jan 202X - May 202X",
-			location: "[Your University]",
-			description: "Mentored 50+ students, held office hours, and graded assignments for foundational computer science concepts. Received a 95% positive feedback rating from students."
+			role: "NEHS Website Development Officer",
+			company: "St. Francis High School",
+			date: "Aug 2024 - May 2025",
+			location: "La Canada Flintridge",
+			description: "Mentored students, held office hours for foundational computer science concepts, and developed a website for my school's literary magazine using Sqaurespace."
 		}
 	],
 
-	// Add any education or awards
+	// A list of your education and awards.
 	education: [
 		{
-			degree: "B.S. in Computer Science",
-			institution: "[Your University]",
-			date: "Expected May 202X",
-			note: "Minor in [e.g., Business, Data Science]"
+			degree: "Machine Learning Specialization",
+			institution: "Coursera (Deeplearning.ai)",
+			date: "June 2025",
+			note: "link to certificate: https://www.coursera.org/account/accomplishments/specialization/U2ERF887ORRW"
 		},
 		{
-			degree: "Best 'Vibe' Hack",
-			institution: "[Some Hackathon]",
-			date: "Fall 202X",
-			note: "Awarded for the project with the slickest UI and best pitch."
+			degree: "High School Diploma",
+			institution: "St. Francis High School",
+			date: "May 2025",
+			note: ""
+		}
+	],
+	// A list of your professional connections.
+	connections:
+	[
+		{
+			name : "bill",
+			company : "microsoft",
+			quote : "'Joe Biden'"
 		}
 	]
 };
 
+// Export the portfolio data.
 export default PORTFOLIO_DATA;

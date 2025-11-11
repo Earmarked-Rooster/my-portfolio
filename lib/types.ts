@@ -1,3 +1,4 @@
+// Defines the structure of the main portfolio object.
 export type Portfolio = {
 	name: string;
 	headline: string;
@@ -8,8 +9,10 @@ export type Portfolio = {
 	projects: Project[];
 	experience: Experience[];
 	education: Education[];
+	connections : Connections[];
 };
 
+// Defines the structure of a project object.
 export type Project = {
 	title: string;
 	description: string;
@@ -18,6 +21,15 @@ export type Project = {
 	liveLink: string;
 };
 
+// Defines the structure of a connection object.
+export type Connections = 
+{
+	name : string;
+	company : string;
+	quote : string;
+}
+
+// Defines the structure of an experience object.
 export type Experience = {
 	role: string;
 	company: string;
@@ -26,6 +38,7 @@ export type Experience = {
 	description: string;
 };
 
+// Defines the structure of an education object.
 export type Education = {
 	degree: string;
 	institution: string;

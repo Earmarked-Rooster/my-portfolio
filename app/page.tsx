@@ -1,10 +1,13 @@
-// import Image from "next/image";
+// Import the Link component from Next.js for navigation.
 import Link from "next/link";
+// Import various icons from the lucide-react library.
 import { Github, Linkedin, Twitter, ExternalLink, Mail, Briefcase, Code, MapPin, Calendar, Award, Handshake } from 'lucide-react';
 
+// Import portfolio data and types from the configuration and type definition files.
 import portfolioData from '@/lib/config';
-import type { Education, Experience, Project } from '@/lib/types';
+import type { Education, Experience, Project, Connections } from '@/lib/types';
 
+// Map social media and other link names to their corresponding icon components.
 const IconMap: {
 	[key: string]: typeof Github | typeof Linkedin | typeof Twitter | typeof Code | typeof Handshake;
 } = {
@@ -15,12 +18,13 @@ const IconMap: {
 	Handshake: Handshake
 };
 
+// The main component for the home page.
 export default function Home() {
 	return (
 		<div className="font-geist-sans antialiased bg-gray-950 text-gray-200 min-h-screen">
 			<div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
 
-				{/* Header/Nav */}
+				{/* Header section with navigation links. */}
 				<header className="flex justify-between items-center py-6">
 					<div className="text-2xl font-bold text-white">
 						{portfolioData.name.split(' ').map(n => n[0]).join('')}
@@ -39,7 +43,7 @@ export default function Home() {
 
 				<main className="space-y-20 mt-10">
 
-					{/* Hero Section */}
+					{/* Hero section with name, headline, bio, and social media links. */}
 					<section id="home" className="text-center space-y-10">
 						<h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
 							{portfolioData.name}
@@ -76,7 +80,7 @@ export default function Home() {
 						</div>
 					</section>
 
-					{/* Skills Section */}
+					{/* Skills section displaying a list of skills. */}
 					<section id="skills">
 						<h2 className="text-3xl font-bold text-white text-center">
 							Core Competencies
@@ -93,7 +97,7 @@ export default function Home() {
 						</div>
 					</section>
 
-					{/* Projects Section */}
+					{/* Projects section displaying a list of projects. */}
 					<section id="projects">
 						<h2 className="text-3xl font-bold text-white text-center">
 							Projects
@@ -105,7 +109,7 @@ export default function Home() {
 						</div>
 					</section>
 
-					{/* Experience Section */}
+					{/* Experience section displaying a list of work experiences. */}
 					<section id="experience">
 						<h2 className="text-3xl font-bold text-white text-center">
 							Experience
@@ -117,7 +121,7 @@ export default function Home() {
 						</div>
 					</section>
 
-					{/* Education Section */}
+					{/* Education section displaying education and awards. */}
 					<section id="education">
 						<h2 className="text-3xl font-bold text-white text-center">
 							Education & Awards
@@ -128,10 +132,21 @@ export default function Home() {
 							))}
 						</div>
 					</section>
-
+					
+					{/* Connections section displaying a list of professional connections. */}
+					<section id = "connections">
+						<h2 className = "text-3xl font-bold text-white text-center">
+							Connections
+						</h2>
+						<div className = "mt-8 space-y-8">
+							{portfolioData.connections.map((con) =>(
+								<ConnectionsItem key = {con.name} con = {con} />
+							))}
+						</div>
+					</section>
 				</main>
 
-				{/* Footer */}
+				{/* Footer section with copyright information. */}
 				<footer className="text-center text-gray-500 py-12 mt-12">
 					© {new Date().getFullYear()} {portfolioData.name}.
 					Built with React & Tailwind.
@@ -141,7 +156,7 @@ export default function Home() {
 	);
 }
 
-// Sub-component for Project Cards
+// A sub-component for rendering a project card.
 function ProjectCard({ project }: { project: Project }) {
 	return (
 		<div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 transition-all hover:shadow-blue-900/20 hover:border-gray-700">
@@ -187,7 +202,7 @@ function ProjectCard({ project }: { project: Project }) {
 	);
 }
 
-// Sub-component for Experience Items
+// A sub-component for rendering an experience item.
 function ExperienceItem({ exp }: { exp: Experience }) {
 	return (
 		<div className="flex">
@@ -217,7 +232,7 @@ function ExperienceItem({ exp }: { exp: Experience }) {
 	);
 }
 
-// Sub-component for Education Items
+// A sub-component for rendering an education item.
 function EducationItem({ edu }: { edu: Education }) {
 	return (
 		<div className="flex">
@@ -234,4 +249,24 @@ function EducationItem({ edu }: { edu: Education }) {
 			</div>
 		</div>
 	);
+}
+
+// A sub-component for rendering a connection item.
+function ConnectionsItem({ con } : { con : Connections})
+{
+	return (
+		<div className="flex">
+			<div className = "shrink-0 mr-4">
+				<span className = "flex items-center justify-center h-10 w-10 rounded-full bg-gray-800 border border-gray-700">
+					<Award className = "w-5 h-5 text-blue-400" />
+				</span>
+			</div>
+			<div className = "grow">
+				<h3 className = "text-lg font-bold text-white">{con.name}</h3>
+				<h3 className = "text-lg font-bold text-white">{con.company}</h3>
+				<h3 className = "text-lg font-bold text-white">{con.quote}</h3>
+			</div>
+		</div>
+	)
+
 }
