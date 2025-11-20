@@ -1,7 +1,7 @@
 // Import the Link component from Next.js for navigation.
 import Link from "next/link";
 // Import various icons from the lucide-react library.
-import { Github, Linkedin, Twitter, ExternalLink, Mail, Briefcase, Code, MapPin, Calendar, Award, Handshake } from 'lucide-react';
+import { Github, Linkedin, Twitter, ExternalLink, Mail, Briefcase, Code, MapPin, Calendar, Award, Handshake, Globe } from 'lucide-react';
 
 // Import portfolio data and types from the configuration and type definition files.
 import portfolioData from '@/lib/config';
@@ -258,13 +258,13 @@ function ConnectionsItem({ con } : { con : Connections})
 		<div className="flex">
 			<div className = "shrink-0 mr-4">
 				<span className = "flex items-center justify-center h-10 w-10 rounded-full bg-gray-800 border border-gray-700">
-					<Award className = "w-5 h-5 text-blue-400" />
+					<Globe className = "w-5 h-5 text-blue-400" />
 				</span>
 			</div>
 			<div className = "grow">
 				<h3 className = "text-lg font-bold text-white">{con.name}</h3>
-				<h3 className = "text-lg font-bold text-white">{con.company}</h3>
-				<h3 className = "text-lg font-bold text-white">{con.quote}</h3>
+				<h3 className = "text-blue-300 font-medium">{con.company}</h3>
+				<h3 className = "text-sm text-gray-400 mt-1">{con.quote}</h3>
 			</div>
 		</div>
 	)

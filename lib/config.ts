@@ -82,9 +82,9 @@ const PORTFOLIO_DATA: Portfolio = {
 	connections:
 	[
 		{
-			name : "bill",
-			company : "microsoft",
-			quote : "'Joe Biden'"
+			name : "",
+			company : "",
+			quote : ""
 		}
 	]
 };
