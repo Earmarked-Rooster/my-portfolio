@@ -8,7 +8,7 @@ const PORTFOLIO_DATA: Portfolio = {
 	// Your headline.
 	headline: "Student | Intermediate Programmer | AI Enthusiast",
 	// A short bio about yourself.
-	bio: "A results-driven Math of Computation student at UCLA with a passion for building disruptive, scalable, and user-centric applications. Eager to leverage modern technologies to solve real-world problems and drive impactful change. Currently seeking high-growth internship opportunities for Summer 2025.",
+	bio: "A results-driven Math of Computation student at UCLA with a passion for building disruptive, scalable, and user-centric applications. Eager to leverage modern technologies to solve real-world problems and drive impactful change. Currently seeking high-growth internship opportunities for Summer 2026.",
 
 	// Your contact email.
 	email: "rio4tahmazyan@gmail.com",
